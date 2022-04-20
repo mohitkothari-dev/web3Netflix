@@ -1,0 +1,71 @@
+.WelcomeScreen__logo {
+    position: relative;
+    z-index: 2;
+    height: 36px;
+    width: 136px;
+    top: 25px;
+    left: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .WelcomeScreen__logo {
+        height: 20px;
+        width: 75px;
+        left: 20px;
+    }
+}
+
+.welcomeScreen__button {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .welcomeScreen__button {
+        right: 20px;
+    }
+}
+
+.welcomeScreen__logo {
+    width: 136px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+.h1 {
+    font-size: 27px;
+    color: #fff;
+    margin-bottom: -20px;
+}
+
+@media screen and (min-width: 740px) {
+    .h1 {
+        font-size: 38px;
+    }
+}
+
+.h2 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 740px) {
+    .h2 {
+        font-size: 27px;
+    }
+}
+
+.h3 {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.welcomeScreen__text {
+    padding: 150px 0;
+    text-align: center;
+    z-index: 1;
+}

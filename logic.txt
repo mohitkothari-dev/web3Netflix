@@ -1,0 +1,55 @@
+//import { useState } from 'react'
+
+/* SubscribedUsers eth address == _User eth address and isSubscribed must be = True */
+  /* Check if current user's isSubscribed is True */
+  
+  //const [isSub, setIsSub] = useState(false)
+  const isUserSubscribed = async () => {
+    const u = user.attributes.ethAddress        //current user / loggedin user
+    console.log(u)
+
+    const query = new Moralis.Query('SubscribedUsers');
+    query.equalTo('isSubscribed', true);
+    query.equalTo('ethAddress', u);
+
+    const findAll = await query.find();         //find all the users with isSubscribed true  //query.first
+    console.log(findAll[0].attributes.ethAddress)     //console.log(findAll.attributes.ethAddress) 
+    if (findAll >= 0) {
+    //setIsSub(true)
+    }
+  }
+
+
+
+  ==================================================================================================================
+  
+  const { Moralis, user } = useMoralis();
+
+  const query = new Moralis.Query('SubscribedUsers');
+  query.equalTo('isSubscribed', true);
+
+  const findAll = query.find();
+  console.log(findAll);
+
+  console.log(user.getUsername());
+
+  ==================================================================================================================
+    /* If subscribed then all the buttons will be changed to upgrade and stream button will also appear */
+  /* An additional button to redirect you to the main content page. It will check of the user is subscribed or not. */
+    const u = user.attributes.ethAddress        //current user / loggedin user
+    console.log(u)
+
+    /* Query1 - Check if user is there is SubscribedUser database or not? 
+    if Query1 turns out to be TRUE then, show'em plans page
+    */
+    /* Query2 - If user is there then, check if isSubscribed value is True or not? */
+    const query = new Moralis.Query('SubscribedUsers');
+    query.equalTo('isSubscribed', true);
+    query.equalTo('ethAddress', u);
+
+    const findAll = query.first();         //find all the users with isSubscribed true
+    findAll.then(function(result) {
+      console.log(result.attributes.ethAddress);
+    })
+
+    ==============================================================================================================

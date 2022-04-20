@@ -1,0 +1,47 @@
+.NewUserHeader__logo {
+    position: relative;
+    z-index: 2;
+    height: 36px;
+    width: 136px;
+    top: 25px;
+    left: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .NewUserHeader__logo {
+        height: 20px;
+        width: 75px;
+        left: 20px;
+    }
+}
+
+.NewUserHeader__text {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    right: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .NewUserHeader__text {
+        right: 20px;
+    }
+}
+
+.NewUserHeader__a {
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .NewUserHeader__a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .NewUserHeader__a {
+        font-size: 16px;
+    }
+}

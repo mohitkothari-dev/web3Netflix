@@ -1,0 +1,21 @@
+.cryptoLogos {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    margin-left: 50px;
+    margin-right: 50px;
+} 
+
+@media screen and (max-width: 500px) {
+    .cryptoLogos {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.cryptoLogos__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}

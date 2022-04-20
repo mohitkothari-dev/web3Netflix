@@ -1,0 +1,44 @@
+.plans {
+    padding: 20px 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .plans {
+        padding: 0 20px;
+    }
+}
+
+
+.plans__h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+    .plans__h1 {
+        font-size: 28px;
+    }
+}
+
+.plans__subscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .plans__subscription {
+        flex-direction: column;
+    }
+}
+
+.plans__subscriptionCard {
+    width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .plans__subscriptionCard {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

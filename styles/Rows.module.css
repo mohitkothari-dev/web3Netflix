@@ -1,0 +1,67 @@
+.row {
+    color: #ffffff;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.rowPosters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.rowPosters::-webkit-scrollbar {
+    display: none;
+}
+
+.modal {
+    max-height: 200px !important;
+}
+  
+.modalContent {
+    position: relative;
+    top: -90px;
+    left: -35px;
+    width: 100vw;
+    z-index: -1;
+}
+
+.modalImg {
+    z-index: -100;
+    width:100%;
+    height: 80vh;
+}
+
+.modalPlayButton {
+    position: fixed;
+    top: 60vh;
+    left: 6%;
+    display: flex;
+    gap: 10px
+}
+  
+.details {
+    color: var(--back-color);
+    font-weight: bold;
+    display: flex;
+    font-size: 18px;
+}
+  
+  .movieInfo {
+    display: flex;
+    font-size: 12px;
+  }
+  
+  .description{
+    padding-left: 50px;
+    width: 80%;
+    color: var(--back-color);
+  }
+
+@media screen and (max-width: 500px) {
+    .description{
+        padding-left: 20px;
+    } 
+}

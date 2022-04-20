@@ -1,0 +1,104 @@
+.banner__contents {
+    margin-left: 50px; /*20px on mobile view and 50 on desktop*/
+    padding-top: 104px;
+    height: 190px;
+}
+
+.banner__title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.banner__description {
+    line-height: 16px;
+    font-size: 12px;
+    max-width: 360px;
+    height: 80px;
+}
+
+.banner__buttons {
+    display: flex;
+}
+
+.banner__button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.3vw;
+    padding: 8px 32px;
+    margin-right: 16px;
+    background-color: rgba(51,51,51,0.7);    
+}
+
+@media screen and (max-width: 500px) {
+    .banner__button {
+        padding: 8px 24px;
+    }
+}
+
+.banner__button:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 500px) {
+    .banner__contents {
+        margin-left: 20px;
+    }
+}
+
+/*Pop-up Modal*/
+.modal {
+    max-height: 200px !important;
+}
+  
+.modalContent {
+    position: relative;
+    top: -90px;
+    left: -35px;
+    width: 100vw;
+    z-index: -1;
+}
+
+.modalImg {
+    z-index: -100;
+    width:100%;
+    height: 80vh;
+}
+
+.modalPlayButton {
+    position: fixed;
+    top: 60vh;
+    left: 6%;
+    display: flex;
+    gap: 10px
+}
+  
+.details {
+    color: var(--back-color);
+    font-weight: bold;
+    display: flex;
+    font-size: 18px;
+}
+  
+  .movieInfo {
+    display: flex;
+    font-size: 12px;
+  }
+  
+  .description{
+    padding-left: 50px;
+    width: 80%;
+    color: var(--back-color);
+  }
+
+@media screen and (max-width: 500px) {
+    .description{
+        padding-left: 20px;
+    } 
+}
