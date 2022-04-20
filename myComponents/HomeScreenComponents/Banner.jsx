@@ -62,8 +62,18 @@ const Banner = () => {
                     <img 
                     src={st} 
                     alt={selectedFilm.name} className={styles.modalImg} />
-                    <div className={styles.modalPlayButton} >
+                    <div className={styles.movieInfo}>
+                        <div className={styles.description}>
+                            <div className={styles.details}>
+                                <span>{selectedFilm.first_air_date}</span>
+                            </div>
+                            {selectedFilm.overview}
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.modalPlayButton} >
                         <Button
+                        onClick={() => console.log('Play Button is been clicked')}
                         icon='chevronRightX2'
                         text='Play'
                         theme='secondary'
@@ -75,15 +85,6 @@ const Banner = () => {
                         theme='translucent'
                         type='button'
                         ></Button>
-                    </div>
-                    <div className={styles.movieInfo}>
-                        <div className={styles.description}>
-                            <div className={styles.details}>
-                                <span>{selectedFilm.first_air_date}</span>
-                            </div>
-                            {selectedFilm.overview}
-                        </div>
-                    </div>
                 </div>
             </Modal>
         </div>

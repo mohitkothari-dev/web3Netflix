@@ -53,7 +53,16 @@ const Rows = ({title, fetchUrl, isLargeRow = false}) => {
                         isLargeRow ? selectedFilm.poster_path : selectedFilm.backdrop_path
                     }`} 
                     alt={selectedFilm.name} className={styles.modalImg} />
-                    <div className={styles.modalPlayButton} >
+                    <div className={styles.movieInfo}>
+                        <div className={styles.description}>
+                            <div className={styles.details}>
+                                <span>{selectedFilm.first_air_date}</span>
+                            </div>
+                            {selectedFilm.overview}
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.modalPlayButton} >
                         <Button
                         icon='chevronRightX2'
                         text='Play'
@@ -67,15 +76,6 @@ const Rows = ({title, fetchUrl, isLargeRow = false}) => {
                         type='button'
                         ></Button>
                     </div>
-                    <div className={styles.movieInfo}>
-                        <div className={styles.description}>
-                            <div className={styles.details}>
-                                <span>{selectedFilm.first_air_date}</span>
-                            </div>
-                            {selectedFilm.overview}
-                        </div>
-                    </div>
-                </div>
             </Modal>
         </div>
         )}
