@@ -5,6 +5,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import axios from '../../api'
 import requests from '../../Requests'
 import { Button, Modal } from 'web3uikit'
+import Link from 'next/link'
 
 const Banner = () => {
 
@@ -39,7 +40,9 @@ const Banner = () => {
       <div className={styles.banner__contents}>
         <h1 className={styles.banner__title}>{movie?.title || movie?.name || movie?.original_name}</h1>
         <div className={styles.banner__buttons}>
+          <Link href='/player'>
           <button className={styles.banner__button}><PlayArrowIcon style={{ marginRight: '2px' }} ></PlayArrowIcon> Play</button>
+          </Link>
           <button 
           className={styles.banner__button}
           onClick={()=> {setVisible();setSelectedFilm(movie);}}
@@ -72,20 +75,21 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className={styles.modalPlayButton} >
-                        <Button
-                        onClick={() => console.log('Play Button is been clicked')}
-                        icon='chevronRightX2'
-                        text='Play'
-                        theme='secondary'
-                        type='button'
-                        ></Button>
+                  <Link href='/player'>
+                    <Button
+                    icon='chevronRightX2'
+                    text='Play'
+                    theme='secondary'
+                    type='button'
+                    ></Button>
+                  </Link>
                         <Button
                         icon='plus'
                         text='Add to My List'
                         theme='translucent'
                         type='button'
                         ></Button>
-                </div>
+                    </div>
             </Modal>
         </div>
         )}

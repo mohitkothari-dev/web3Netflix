@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useMoralis } from 'react-moralis'
 import styles from '../styles/Player.module.css'
 import { useRouter } from 'next/router'
