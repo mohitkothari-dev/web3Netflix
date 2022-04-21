@@ -28,6 +28,7 @@
     right: 50px;
     cursor: pointer;
     display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 500px) {

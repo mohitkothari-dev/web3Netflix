@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Avatar } from 'web3uikit'
 import styles from '../../styles/Nav.module.css'
 import { useMoralis } from 'react-moralis'
+import Address from './Address'
 
 const logo = '/images/logo.png'
 
@@ -31,6 +32,7 @@ const Nav = () => {
           <Image src={logo} alt='Netflix logo' layout='fill'></Image>
         </div>
         <div className={styles.Nav__profile} onClick={() => logout()} >
+          <Address></Address>
           <Avatar theme="image" size={30}/>
         </div>
       </div>
