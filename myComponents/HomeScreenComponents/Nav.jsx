@@ -2,11 +2,13 @@ import React, {useState,useEffect} from 'react'
 import Image from 'next/image'
 import { Avatar } from 'web3uikit'
 import styles from '../../styles/Nav.module.css'
+import { useMoralis } from 'react-moralis'
 
 const logo = '/images/logo.png'
 
 const Nav = () => {
 
+  const { logout } = useMoralis();
   const [show, handleShow] = useState();
 
   const transitionNavBar = () => {
@@ -28,8 +30,8 @@ const Nav = () => {
         <div className={styles.Nav__logo} >
           <Image src={logo} alt='Netflix logo' layout='fill'></Image>
         </div>
-        <div className={styles.Nav__profile}>
-          <Avatar theme="image" size={30} />
+        <div className={styles.Nav__profile} onClick={() => logout()} >
+          <Avatar theme="image" size={30}/>
         </div>
       </div>
     </div>
