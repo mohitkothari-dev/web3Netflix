@@ -4,7 +4,7 @@ import styles from '../styles/Player.module.css'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 
-const vid = 'netflix.mp4'
+const vid = 'https://ipfs.moralis.io:2053/ipfs/QmdgcrpjjKYNeJoXMzMutwnCk5HkFjHzvwEy4nP5jN2doj?__cf_chl_rt_tk=WymEGRaCEeYNuEBu5gKyVgtxiN00WW89K6UjtKobWF4-1650439478-0-gaNycGzNCaU'
 
 const Player = () => {
     const { isAuthenticated } = useMoralis();
