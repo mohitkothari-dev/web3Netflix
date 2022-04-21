@@ -63,6 +63,7 @@ const Plans = () => {
       console.log(error);
     }
     );
+    redirect();
   }
 
   const transfer01Eth = async () => {
@@ -80,6 +81,7 @@ const Plans = () => {
       console.log(error);
     }
     );
+    redirect();
   }
 
   const transferPoint1Eth = async () => {
@@ -97,6 +99,7 @@ const Plans = () => {
       console.log(error);
     }
     );
+    redirect();
   }
 
   return (
